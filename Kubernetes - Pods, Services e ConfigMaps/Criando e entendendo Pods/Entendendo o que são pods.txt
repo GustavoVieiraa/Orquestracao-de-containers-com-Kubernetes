@@ -1,0 +1,5 @@
+Nesta aula do curso "Kubernetes: Pods, Services e ConfigMaps", o instrutor Daniel Artine explica o conceito de pods no Kubernetes. Ele inicia fazendo uma analogia com o Docker, destacando que, enquanto no Docker trabalhamos diretamente com containers, no Kubernetes gerenciamos pods, que são cápsulas que podem conter um ou mais containers.
+
+O instrutor detalha que cada pod recebe um endereço IP único, que é compartilhado entre os containers dentro dele. Isso significa que não é possível ter dois containers utilizando a mesma porta dentro de um mesmo pod. Caso um container falhe, o pod como um todo pode parar de funcionar, e o Kubernetes pode criar um novo pod para substituí-lo, mas com um novo IP.
+
+Além disso, os pods compartilham o mesmo namespace de rede e podem se comunicar entre si via localhost, facilitando a comunicação entre os containers.
