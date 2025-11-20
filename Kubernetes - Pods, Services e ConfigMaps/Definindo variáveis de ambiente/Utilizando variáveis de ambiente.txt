@@ -1,0 +1,7 @@
+Nesta aula, aprendemos como definir variáveis de ambiente para configurar um container MySQL dentro de um Pod no Kubernetes.
+
+Inicialmente, o instrutor explica a necessidade de configurar o banco de dados MySQL, utilizando variáveis de ambiente como MYSQL_ROOT_PASSWORD, MYSQL_PASSWORD e MYSQL_DATABASE. Essas variáveis são definidas diretamente no arquivo de definição do Pod, dentro da seção env.
+
+Em seguida, o instrutor demonstra como aplicar essas configurações e acessar o banco de dados através do Pod, utilizando o comando kubectl exec para entrar no modo interativo e executar comandos MySQL.
+
+Por fim, é explicado que o sistema de notícias precisa das informações de acesso ao banco de dados (host, usuário, senha e nome do banco) para funcionar corretamente. O instrutor aponta que o arquivo de configuração do Pod está acoplado, misturando definições do Pod com configurações de ambiente.
