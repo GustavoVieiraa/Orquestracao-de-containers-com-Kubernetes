@@ -1,0 +1,21 @@
+Nesta aula, aprendemos sobre Deployments no Kubernetes, que são uma camada acima dos ReplicaSets e que permitem o controle de versionamento de imagens e Pods, similar ao Git para código.
+
+Aqui está um resumo dos principais pontos abordados:
+
+  O que são Deployments: 
+    Deployments são uma abstração acima dos ReplicaSets, gerenciando a criação e atualização de Pods.
+
+  Criação de um Deployment: 
+    A criação de um Deployment é semelhante à de um ReplicaSet, mas com o "kind" definido como "Deployment".
+  
+  Vantagens dos Deployments: 
+  A principal vantagem é o controle de versionamento, permitindo rastrear e reverter alterações nas imagens dos Pods.
+
+Comandos Úteis:
+  kubectl rollout history deployment <nome>: Mostra o histórico de revisões de um Deployment.
+
+  kubectl annotate deployment <nome> kubernetes.io/change-cause="<descrição>": Adiciona uma descrição a uma revisão para facilitar o rastreamento de mudanças.
+
+  kubectl rollout undo deployment <nome> --to-revision=<número>: Reverte para uma revisão específica.
+
+Boas Práticas: É recomendado criar Pods através de Deployments para aproveitar o controle de versionamento e a estabilidade proporcionada.
