@@ -1,0 +1,20 @@
+Nesta aula, o foco principal é demonstrar como aplicar ConfigMaps em um projeto Kubernetes para gerenciar variáveis de ambiente de forma eficiente.
+
+Aqui estão os pontos chave que abordamos:
+
+Importando Valores do ConfigMap para um Pod:
+  Inicialmente, a aula mostra como importar valores individuais de um ConfigMap para variáveis de ambiente dentro de um pod, utilizando valueFrom e configMapKeyRef.
+  
+  Em seguida, explica como importar todas as variáveis de um ConfigMap de uma só vez, utilizando configMapRef, o que simplifica a configuração quando todas as variáveis são necessárias.
+
+Criação de ConfigMaps para Diferentes Componentes:
+  A aula demonstra a criação de ConfigMaps para diferentes componentes de um sistema (banco de dados, sistema de notícias e portal de notícias), cada um contendo as variáveis de ambiente específicas necessárias.
+
+Utilização de Serviços para Comunicação entre Pods:
+  É explicado como os serviços Kubernetes (ClusterIP e NodePort) são utilizados para permitir a comunicação entre os pods. O ClusterIP é usado para comunicação interna dentro do cluster, enquanto o NodePort é usado para acessar os serviços externamente.
+
+Aplicação das Melhores Práticas:
+  A aula enfatiza a importância de usar variáveis de ambiente para manter a comunicação entre os pods de forma agnóstica, permitindo que a configuração seja facilmente alterada sem modificar o código da aplicação.
+
+Exemplos Práticos:
+  São fornecidos exemplos práticos de como criar e aplicar ConfigMaps para configurar a conexão entre um sistema de notícias e um banco de dados MySQL, e como configurar o portal de notícias para exibir as notícias cadastradas.
