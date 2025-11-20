@@ -1,0 +1,24 @@
+Nesta aula, aprendemos sobre ReplicaSets no Kubernetes, que são estruturas que garantem que um número especificado de Pods esteja sempre em execução.
+
+Pontos principais:
+
+  Pods Efêmeros: Pods podem falhar ou serem interrompidos, e o ReplicaSet garante que novos Pods sejam criados para substituí-los.
+
+  Encapsulamento de Pods: Um ReplicaSet encapsula um ou mais Pods, gerenciando-os para manter o número desejado de réplicas.
+  
+  Disponibilidade e Balanceamento de Carga: Múltiplas réplicas garantem que a aplicação permaneça acessível durante falhas e permitem o balanceamento de carga.
+
+  Criação de um ReplicaSet:
+    A apiVersion é apps/v1 e o tipo é ReplicaSet.
+    
+    Define um template com as informações do Pod que será gerenciado.
+    
+    Especifica o número de réplicas desejadas.
+    
+    Utiliza matchLabels para selecionar os Pods que o ReplicaSet deve gerenciar, que devem ser iguais aos labels dos Pods.
+
+  Verificação: O comando kubectl get rs mostra o estado do ReplicaSet, incluindo o número desejado e atual de Pods prontos.
+
+  Serviço: O serviço continua funcionando sem alterações, pois ele seleciona os Pods com base nos labels, independentemente de estarem dentro de um ReplicaSet.
+
+Em resumo, ReplicaSets garantem a alta disponibilidade e o balanceamento de carga das aplicações no Kubernetes, mantendo o número desejado de Pods em execução.
