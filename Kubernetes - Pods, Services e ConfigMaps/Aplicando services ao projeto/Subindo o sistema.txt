@@ -1,0 +1,3 @@
+Nesta aula, o instrutor demonstra como criar um serviço e um pod para o sistema de notícias, permitindo o acesso tanto do mundo externo quanto do interno ao cluster. Para isso, ele cria arquivos YAML para o pod e o serviço do sistema de notícias, definindo suas configurações, como imagem, portas e labels.
+
+O sistema de notícias é exposto externamente através de um NodePort, permitindo o acesso via porta 30001.
