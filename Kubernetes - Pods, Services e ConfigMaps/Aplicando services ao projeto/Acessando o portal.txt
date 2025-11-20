@@ -1,0 +1,11 @@
+Nesta aula, o foco é expor o "portal-noticias" para acesso externo através do NodePort.
+
+Primeiro, removemos todos os pods e serviços existentes para começar com um ambiente limpo. Em seguida, adicionamos uma label (app: portal-noticias) ao pod do "portal-noticias" e definimos a porta 80 para documentação.
+
+Criamos um serviço chamado "svc-portal-noticias.yaml" do tipo NodePort, configurando-o para encaminhar o tráfego da porta 80 para a porta 80 do pod. O NodePort é definido como 30000 para permitir o acesso externo ao cluster.
+
+Aplicamos as configurações do pod e do serviço usando kubectl apply.
+
+Por fim, acessamos a aplicação através do navegador usando localhost:30000. Em sistemas Linux, pode ser necessário usar o IP interno do Minikube para acessar a aplicação.
+
+O objetivo final desta
