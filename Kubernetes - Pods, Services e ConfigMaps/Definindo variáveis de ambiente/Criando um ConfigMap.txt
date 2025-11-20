@@ -1,0 +1,11 @@
+Nesta aula, aprendemos sobre ConfigMaps no Kubernetes, uma solução para desacoplar informações de configuração dos Pods.
+
+Principais pontos:
+
+  O que são: ConfigMaps armazenam configurações (pares de chave-valor) que podem ser usadas por Pods e outros recursos.
+  
+  Benefícios: Reutilização de configurações, desacoplamento de configurações do código do Pod, tornando os Pods mais portáveis.
+
+  Como criar: Usando um arquivo YAML, definindo apiVersion, kind: ConfigMap, metadata: name e a seção data com os pares de chave-valor.
+
+Comandos: kubectl apply -f db-configmap.yaml para criar, kubectl get configmap para listar, e kubectl describe configmap nome-do-configmap para detalhes.
