@@ -1,0 +1,29 @@
+Nesta aula, o instrutor Daniel Artine explora o conceito de ClusterIP no Kubernetes, um tipo de serviço que facilita a comunicação entre pods dentro do mesmo cluster.
+
+Aqui estão os pontos principais abordados:
+
+O que é ClusterIP:
+Serve para comunicação interna entre pods em um cluster.
+Não é acessível de fora do cluster.
+A comunicação é unidirecional, dependendo de um serviço atrelado.
+
+Criação de pods:
+Demonstra a criação de dois pods (pod-1 e pod-2) com arquivos de definição YAML.
+Aborda a importância de especificar a porta do container (containerPort) para documentação e clareza.
+
+Criação de um serviço ClusterIP:
+Explica como criar um serviço para direcionar o tráfego para um pod específico (pod-2).
+Utilização de labels para associar o serviço ao pod correto.
+Configuração das portas do serviço (port e targetPort) para encaminhar o tráfego para a porta correta do pod.
+
+Comunicação com o serviço:
+Demonstra como acessar o pod através do serviço ClusterIP de dentro de outro pod no cluster.
+Explica que o serviço fornece um IP e DNS estáveis para comunicação, mesmo que o IP do pod mude.
+
+Flexibilidade na configuração de portas:
+Aborda a possibilidade de configurar o serviço para ouvir em uma porta diferente da porta do pod (targetPort).
+
+Teste e validação:
+Demonstra como testar a comunicação com o serviço usando curl dentro de um pod.
+Mostra o que acontece quando o pod é deletado, mas o serviço continua em execução.
+Em resumo, a aula ensina como criar e configurar um serviço ClusterIP para permitir a comunicação estável e flexível entre pods dentro de um cluster Kubernetes.
