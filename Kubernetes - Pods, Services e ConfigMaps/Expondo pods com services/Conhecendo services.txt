@@ -1,0 +1,7 @@
+Nesta aula, aprendemos sobre a importância dos services no Kubernetes para garantir a comunicação estável entre os pods.
+
+O problema que estamos tentando resolver é que os IPs dos pods podem mudar quando eles são recriados, o que dificulta a comunicação entre os diferentes pods dentro do cluster.
+
+Os services resolvem esse problema fornecendo um IP fixo e um DNS para acessar os pods, mesmo que seus IPs mudem. Além disso, os services também podem fazer o balanceamento de carga entre os pods.
+
+Existem três tipos principais de services: ClusterIP, NodePort e LoadBalancer, cada um com uma finalidade específica, e nas próximas aulas vamos nos aprofundar em cada um deles.
