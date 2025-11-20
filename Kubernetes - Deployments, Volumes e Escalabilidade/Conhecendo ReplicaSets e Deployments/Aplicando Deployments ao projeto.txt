@@ -1,0 +1,5 @@
+Nesta aula, o foco é transformar os serviços e pods existentes em Deployments para aproveitar os benefícios do Kubernetes, como reinício automático em caso de falhas e controle de versionamento.
+
+Foi demonstrado como remover Deployments e ReplicaSets existentes, criar arquivos YAML para Deployments do portal de notícias, sistema de notícias e banco de dados, e aplicar esses Deployments no Kubernetes.
+
+Além disso, foi abordado como usar o comando kubectl annotate deployment para adicionar informações de CHANGE-CAUSE aos Deployments, facilitando o rastreamento de mudanças.
