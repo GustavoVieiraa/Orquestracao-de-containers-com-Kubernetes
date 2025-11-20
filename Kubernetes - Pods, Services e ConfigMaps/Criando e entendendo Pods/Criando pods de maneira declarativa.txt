@@ -1,0 +1,24 @@
+Nesta aula, aprendemos a criar pods de maneira declarativa, utilizando arquivos de definição .yaml.
+
+Criação do arquivo .yaml:
+  - Foi criado um arquivo chamado primeiro-pod.yaml para definir o pod.
+  - O arquivo inclui informações como a versão da API (v1), o tipo de recurso (Pod) e os metadados (nome do pod).
+
+Especificações do pod:
+  - Definimos as especificações do pod, incluindo um container chamado nginx-container que utiliza a imagem nginx:latest.
+  - Foi demonstrado como múltiplos containers podem ser definidos dentro de um pod.
+
+Aplicação do arquivo de definição:
+  - Utilizamos o comando kubectl apply -f primeiro-pod.yaml para criar o pod com base no arquivo de definição.
+  - O Kubernetes criou o pod conforme as especificações no arquivo.
+
+Edição e atualização do pod:
+  - Foi mostrado como editar o arquivo .yaml para alterar a versão da imagem do nginx.
+  - Aplicamos o arquivo modificado com o mesmo comando kubectl apply, atualizando o pod existente.
+
+Vantagens da abordagem declarativa:
+  - Centralizamos a criação e gerenciamento de recursos através de um único comando (kubectl apply).
+  - Temos um registro do estado desejado do recurso em um arquivo, facilitando a manutenção e o versionamento.
+
+Em resumo, a aula demonstra como a abordagem declarativa simplifica a criação e o gerenciamento de pods no Kubernetes, 
+tornando o processo mais eficiente e fácil de manter.
