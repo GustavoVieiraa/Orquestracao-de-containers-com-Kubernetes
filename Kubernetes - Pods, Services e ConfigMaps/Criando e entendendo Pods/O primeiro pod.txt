@@ -1,0 +1,9 @@
+Nesta aula, aprendemos a criar nosso primeiro Pod no Kubernetes utilizando o comando kubectl run. Utilizamos o Docker Desktop no Windows, mas o processo é similar em outros ambientes.
+
+Com o comando kubectl run nginx-pod --image=nginx:latest, criamos um Pod chamado nginx-pod utilizando a imagem mais recente do Nginx.
+
+Para acompanhar o status do Pod em tempo real, usamos o comando kubectl get pods --watch.
+
+Além disso, exploramos o comando kubectl describe pod nginx-pod para obter informações detalhadas sobre o Pod, como o nó em que foi agendado, o processo de download da imagem, a criação do container e o início do Pod.
+
+Também vimos como editar um Pod existente com o comando kubectl edit pod nginx-pod e alterar a versão da imagem do Nginx. No entanto, essa abordagem imperativa pode levar a problemas, como o erro ImagePullBackOff quando a imagem especificada não existe.
