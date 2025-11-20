@@ -1,0 +1,13 @@
+Nesta aula, aprendemos sobre o tipo de serviço NodePort no Kubernetes, que permite a comunicação com o cluster a partir do mundo externo.
+
+Aqui estão os pontos principais que abordamos:
+
+  O que é NodePort: É um tipo de serviço que expõe um pod para acesso externo, além de funcionar como um ClusterIP dentro do cluster.
+
+  Criação de um NodePort: Demonstramos o processo de criação de um serviço NodePort, definindo a porta interna do cluster e a porta externa (NodePort) que será usada para acessar o serviço.
+  
+  Acesso ao NodePort: Explicamos como acessar um serviço NodePort tanto de dentro do cluster quanto de fora, utilizando o IP do nó (no caso do Linux com Minikube) ou o localhost (no caso do Windows com Docker Desktop).
+  
+  Intervalo de portas NodePort: Discutimos o intervalo de portas que podem ser usadas para o NodePort (30000-32767) e como definir uma porta específica dentro desse intervalo.
+
+Em resumo, o NodePort é uma forma de expor seus pods para o mundo externo, permitindo que os usuários acessem suas aplicações a partir de seus navegadores ou outras ferramentas.
