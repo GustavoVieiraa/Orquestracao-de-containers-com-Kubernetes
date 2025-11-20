@@ -1,0 +1,9 @@
+Nesta aula, Daniel nos guia na criação de um projeto prático utilizando Kubernetes, um portal de notícias, com o objetivo de solidificar os conceitos aprendidos.
+
+Inicialmente, ele demonstra como remover pods criados tanto de forma imperativa (com o comando kubectl delete pod) quanto declarativa (utilizando kubectl delete –f e o arquivo de definição do pod).
+
+Em seguida, o instrutor cria um pod chamado portal-noticias a partir de um arquivo YAML (portal-noticias.yaml), definindo informações como a versão da API, o nome do pod e as especificações do container, incluindo o nome e a imagem Docker a ser utilizada (aluracursos/portal-noticias:1).
+
+Após a criação do pod, Daniel tenta acessar a aplicação através do IP do pod no navegador, mas não obtém sucesso. Ele explica que o IP do pod é interno ao cluster e que é necessário realizar um mapeamento para expor o container para o mundo externo.
+
+Para verificar se a aplicação está funcionando corretamente dentro do pod, o instrutor utiliza o comando kubectl exec para executar o bash dentro do container e, em seguida, utiliza o curl para enviar uma requisição para o localhost, confirmando que a aplicação está respondendo internamente.
