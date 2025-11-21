@@ -1,0 +1,7 @@
+Inicialmente, foi abordado o problema da perda de dados quando um Pod é encerrado, já que os containers são efêmeros. Para solucionar isso, exploramos os Volumes, um recurso do Kubernetes que permite compartilhar dados entre containers dentro de um mesmo Pod.
+
+O ciclo de vida de um Volume é independente dos containers, mas dependente do Pod. Isso significa que, mesmo que um container falhe, os arquivos no Volume persistem, desde que o Pod continue em execução. No entanto, se o Pod falhar, o Volume é removido.
+
+Para exemplificar o uso de Volumes, utilizamos o tipo hostPath, que permite montar um diretório do host em um diretório dentro do container. Demonstramos como criar um arquivo de definição de Pod com dois containers compartilhando um Volume do tipo hostPath.
+
+Além disso, abordamos as configurações necessárias no Windows para compartilhar a pasta do host com o Docker e como aplicar o arquivo de definição do Pod utilizando o kubectl. Por fim, mostramos como acessar os containers dentro do Pod, criar arquivos no Volume compartilhado e verificar que os arquivos são persistidos no host.
