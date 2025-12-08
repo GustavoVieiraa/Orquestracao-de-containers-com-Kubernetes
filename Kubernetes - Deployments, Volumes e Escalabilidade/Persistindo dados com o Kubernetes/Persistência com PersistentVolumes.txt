@@ -1,0 +1,1 @@
+Nesta aula, o instrutor Daniel Artine ensina como configurar a persistência de dados no Kubernetes utilizando Persistent Volumes (PVs) e Persistent Volume Claims (PVCs) no Google Cloud Platform (GCP).
