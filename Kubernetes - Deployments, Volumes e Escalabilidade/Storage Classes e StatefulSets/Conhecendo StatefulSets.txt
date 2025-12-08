@@ -1,0 +1,23 @@
+Nesta aula, o instrutor Daniel Artine explora o conceito de StatefulSets no Kubernetes, contrastando-os com Deployments e demonstrando como eles resolvem o problema da persistência de dados em pods.
+
+Principais pontos abordados:
+
+  Problema Inicial: A perda de arquivos quando um pod de um sistema de notícias falha e é recriado por um Deployment.
+
+  Solução com Persistent Volumes: Utilização de Persistent Volumes (PVs) para garantir que os dados persistam mesmo após a falha de um pod.
+
+  StatefulSets: Recurso do Kubernetes similar a um Deployment, mas voltado para aplicações que precisam manter seu estado (Stateful).
+
+  Identificação Única: Cada pod em um StatefulSet recebe uma identificação única (ordinal), permitindo que ele seja tratado como o mesmo pod mesmo após a reinicialização.
+
+  Persistent Volume Claims: Necessidade de definir um Persistent Volume Claim (PVC) para cada pod dentro de um StatefulSet, garantindo o acesso ao Persistent Volume correto.
+
+  Demonstração Prática: Criação de um StatefulSet para o sistema de notícias, substituindo o Deployment anterior.
+
+  Teste de Falha: Simulação da falha de um pod para verificar se os dados são persistidos corretamente.
+
+  Identificação do Problema: Ausência de Persistent Volumes e Persistent Volume Claims, o que impede a persistência dos dados.
+
+  Solução com Storage Class: Utilização de Storage Classes para resolver o problema de forma mais elegante.
+
+Em resumo, a aula demonstra como os StatefulSets, combinados com Persistent Volumes e Persistent Volume Claims, podem garantir a persistência de dados em aplicações stateful no Kubernetes. No entanto, a demonstração prática revela a necessidade de configurar corretamente os PVs e PVCs para que a persistência funcione como esperado.
