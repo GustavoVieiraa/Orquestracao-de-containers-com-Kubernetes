@@ -1,0 +1,7 @@
+Nesta aula, aprendemos sobre a importância de garantir que nossos Pods estejam prontos para receber requisições antes de serem incluídos no balanceamento de carga.
+
+Foi abordado o uso de Readiness Probes para verificar se um container está pronto para receber tráfego, evitando que requisições sejam direcionadas a Pods que ainda não estão totalmente operacionais.
+
+Além disso, foi demonstrado como configurar Readiness Probes em Deployments e StatefulSets, utilizando diferentes critérios, como requisições HTTP e testes de conexão TCP.
+
+Em resumo, o Readiness Probe garante que a aplicação esteja saudável e pronta para receber requisições, e o Liveness Probe garante que a aplicação seja reiniciada caso não esteja saudável.
