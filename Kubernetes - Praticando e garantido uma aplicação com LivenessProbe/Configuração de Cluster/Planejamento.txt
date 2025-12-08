@@ -1,0 +1,3 @@
+Nesta aula, o instrutor explica sobre o planejamento do projeto do curso. O projeto consiste em colocar uma aplicação (VollMed) em Kubernetes para garantir que ela esteja sempre no ar, com o mínimo de downtime.
+
+A aplicação precisa de um banco de dados e a comunicação entre eles é feita através de um serviço no Kubernetes. Além disso, é necessário especificar a porta que será utilizada para se conectar à aplicação.
