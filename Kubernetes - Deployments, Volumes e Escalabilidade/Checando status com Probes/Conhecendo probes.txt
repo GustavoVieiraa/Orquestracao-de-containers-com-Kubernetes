@@ -1,0 +1,19 @@
+Nesta aula, o instrutor Daniel Artine introduz o conceito de Probes no Kubernetes, focando principalmente no Liveness Probe. O objetivo é entender como o Kubernetes pode verificar se a aplicação dentro de um Pod está funcionando corretamente e, em caso de falha, reiniciá-la automaticamente.
+
+Principais pontos abordados:
+
+  Um Pod pode estar em execução, mas a aplicação dentro dele pode não estar respondendo corretamente (ex: erros 500 ou 404).
+
+  O Kubernetes precisa de uma maneira de detectar esses casos e agir.
+
+Solução: Liveness Probe
+
+  O Liveness Probe é um mecanismo que o kubelet (componente do Kubernetes que roda em cada nó) usa para verificar se a aplicação dentro de um container está viva e funcionando.
+
+  Se o Liveness Probe falhar, o kubelet reinicia o container.
+
+Como funciona:
+
+  O Liveness Probe é configurado dentro da definição do container no arquivo de configuração do Pod.
+
+  Ele define como o kubelet deve verificar a saúde da aplicação (ex: fazendo uma requisição HTTP e verificando o código de status).
