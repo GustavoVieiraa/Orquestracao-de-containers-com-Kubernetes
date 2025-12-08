@@ -1,0 +1,15 @@
+Nesta aula, o foco foi em como implementar o Liveness Probe para garantir a saúde dos seus containers no Kubernetes.
+
+Você aprendeu que o Liveness Probe é um teste que verifica se o container está em execução e saudável. Se o teste falhar, o Kubernetes reinicia o container.
+
+Você também aprendeu a configurar o Liveness Probe no arquivo de configuração do Deployment ou StatefulSet, definindo:
+
+  O tipo de teste (neste caso, um HTTP GET request).
+  A porta e o caminho para o teste.
+  O intervalo de tempo entre os testes.
+  O número máximo de falhas toleradas.
+  O atraso inicial antes de começar os testes.
+
+Além disso, foi abordado que o Kubernetes considera um código HTML entre 200 e 400 como sucesso e qualquer outro código como falha.
+
+Por fim, você aplicou as configurações do Liveness Probe tanto no Deployment do portal-noticias quanto no StatefulSet do sistema-noticias, garantindo que ambos os aplicativos sejam monitorados e reiniciados automaticamente em caso de falha.
