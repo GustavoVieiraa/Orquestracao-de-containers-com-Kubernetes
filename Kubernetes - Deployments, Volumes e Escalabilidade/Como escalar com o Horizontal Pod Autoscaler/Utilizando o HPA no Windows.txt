@@ -1,0 +1,7 @@
+Nesta aula, o foco é demonstrar como o Horizontal Pod Autoscaler (HPA) pode ser utilizado para ajustar automaticamente o número de réplicas de um Pod com base no consumo de recursos, como CPU.
+
+Primeiramente, o instrutor explica como configurar o metrics-server no Kubernetes, que é essencial para coletar as métricas de consumo de recursos dos Pods. Ele demonstra como baixar o arquivo de definição do metrics-server e como aplicar uma configuração específica para o Windows, desabilitando a verificação de certificados através da flag --kubelet-insecure-tls.
+
+Em seguida, ele mostra como gerar carga na aplicação utilizando um script para simular um aumento no número de requisições. Utilizando o comando kubectl get hpa --watch, é possível observar o HPA em ação, ajustando o número de réplicas conforme o consumo de CPU aumenta.
+
+O objetivo final é mostrar como o HPA mantém o consumo médio de CPU em torno de 50%, adicionando ou removendo Pods conforme necessário, dentro de um limite máximo de 10 réplicas.  
