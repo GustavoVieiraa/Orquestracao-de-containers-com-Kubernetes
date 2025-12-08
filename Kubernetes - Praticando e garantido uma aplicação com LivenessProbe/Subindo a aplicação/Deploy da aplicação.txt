@@ -1,0 +1,7 @@
+Nesta aula, aprendemos como implementar nossa aplicação no Kubernetes utilizando o recurso Deployment, que é mais completo que POD e ReplicaSet.
+
+Começamos criando um arquivo chamado app.yaml no VS Code, onde colamos um exemplo de código de deployment do nginx e o adaptamos para a nossa aplicação vollmed.
+
+Em seguida, criamos a imagem da nossa aplicação utilizando o comando docker build e a enviamos para o Docker Hub com o comando docker push.
+
+Por fim, atualizamos o arquivo app.yaml com o nome da nossa imagem no Docker Hub e a porta em que a aplicação roda.
