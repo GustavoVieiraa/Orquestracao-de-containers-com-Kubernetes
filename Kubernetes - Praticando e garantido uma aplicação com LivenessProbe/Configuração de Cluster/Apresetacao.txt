@@ -1,0 +1,11 @@
+Nesta aula de apresentação do curso de Kubernetes, o instrutor Leonardo Sartorello dá as boas-vindas e explica que o curso é voltado para quem já tem alguma experiência com Kubernetes e quer praticar com uma aplicação real.
+
+Durante o curso, você irá:
+
+  Subir uma aplicação utilizando o deployment;
+  Subir um banco de dados utilizando StatefulSet;
+  Criar um load balancer para a aplicação;
+  Verificar a integridade da aplicação com o liveness probe;
+  Realizar o backup automático do banco de dados utilizando um CronJob.
+
+Tudo isso utilizando a aplicação da VollMed, uma aplicação de uma clínica médica.
