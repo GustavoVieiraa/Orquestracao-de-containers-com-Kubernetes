@@ -1,0 +1,16 @@
+Nesta aula, aprendemos sobre o Dashboard do Kubernetes, uma interface gráfica útil para desenvolvimento, que permite visualizar e editar containers de forma rápida.
+
+Pontos chave:
+
+  Dashboard: Interface gráfica do Kubernetes para visualizar informações e interagir com o cluster.
+
+  Minikube: Ferramenta que simula o Kubernetes em uma única máquina, ideal para desenvolvimento.
+
+  Addons: Funcionalidades extras do Minikube que simulam recursos do Kubernetes completo, como o metrics-server.
+
+  Segurança: O Dashboard geralmente não é recomendado em produção devido às permissões administrativas do usuário.
+
+Comandos:
+  minikube start: Inicia o cluster Minikube.
+  minikube dashboard: Abre o Dashboard do Kubernetes.
+  minikube addons enable metrics-server: Habilita o servidor de métricas no Minikube.
