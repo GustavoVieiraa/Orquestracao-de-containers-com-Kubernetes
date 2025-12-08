@@ -1,0 +1,26 @@
+Olá! Nesta aula, o instrutor Daniel Artine aborda o Horizontal Pod Autoscaler (HPA) como uma solução para escalar automaticamente o número de Pods em resposta à demanda de recursos, como o uso da CPU.
+
+Pontos principais:
+
+Problema:
+  Um único Pod pode ficar sobrecarregado com muitas requisições, levando a lentidão ou falhas.
+  Aumentar ou diminuir manualmente o número de Pods é ineficiente.
+
+Solução: Horizontal Pod Autoscaler (HPA)
+  Escala automaticamente o número de Pods com base nas métricas de utilização de recursos (CPU, memória, etc.).
+  Mantém a aplicação responsiva e disponível, ajustando a capacidade conforme necessário.
+
+Configuração do HPA:
+  Definir os limites mínimo e máximo de réplicas (Pods).
+  Especificar a métrica de utilização alvo (ex: 50% da CPU).
+  O HPA ajusta o número de Pods para manter a utilização da métrica dentro da meta definida.
+
+Demonstração:
+  Criação de um arquivo de definição YAML para o HPA.
+  Aplicação das configurações no Kubernetes.
+  Verificação do status do HPA.
+
+Problemas e Soluções:
+  O Kubernetes precisa do metrics server para coletar as métricas de uso da CPU dos Pods.
+
+Em resumo, o HPA é uma ferramenta poderosa para automatizar o escalonamento de aplicações no Kubernetes, garantindo que elas tenham os recursos necessários para lidar com a demanda, sem intervenção manual.
