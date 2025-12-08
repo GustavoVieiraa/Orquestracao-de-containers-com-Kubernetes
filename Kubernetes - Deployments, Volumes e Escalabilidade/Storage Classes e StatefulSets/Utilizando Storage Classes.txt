@@ -1,0 +1,35 @@
+Nesta aula, o instrutor Daniel Artine explora o uso de Storage Classes no Kubernetes para provisionar volumes de forma dinâmica. Aqui está um resumo dos principais pontos abordados:
+
+Criação Dinâmica de Volumes:
+
+    O Storage Class permite criar Persistent Volumes (PVs) e discos dinamicamente, simplificando o processo em comparação com a criação manual.
+
+    Ao associar um Pod a um Persistent Volume Claim (PVC) que utiliza um Storage Class, o Kubernetes cria o disco e o PV automaticamente.
+
+Definição do Storage Class:
+
+    O instrutor demonstra como criar um arquivo YAML (sc.yaml) para definir um Storage Class.
+    
+    Este arquivo inclui informações como o provisionador (por exemplo, kubernetes.io/gce-pd para Google Cloud Platform), o tipo de disco (por exemplo, pd-standard ou pd-ssd) e o sistema de arquivos (fstype, como ext4).
+
+Utilização do Storage Class:
+
+    É mostrado como criar um PVC (pvc-sc.yaml) que referencia o Storage Class definido.
+
+    Ao aplicar este PVC, o Kubernetes provisiona dinamicamente um disco e um PV correspondente.
+
+Integração com Pods:
+
+    O instrutor explica como modificar a definição de um Pod (pod-sc.yaml) para utilizar o PVC que foi criado dinamicamente.
+
+    O Pod pode então acessar o volume provisionado dinamicamente para persistir dados.
+
+Exclusão Dinâmica de Recursos:
+
+    Ao excluir o PVC e o Storage Class, o Kubernetes também remove dinamicamente os discos e PVs associados.
+
+Outros Provisionadores:
+
+    O instrutor menciona que existem diversos outros provisionadores além do GCE, como NFS, RBD, VsphereVolume, PortworxVolume e Local, permitindo a integração com diferentes tipos de armazenamento.
+
+Em resumo, o Storage Class simplifica a gestão de volumes no Kubernetes, permitindo a criação e exclusão dinâmica de recursos de armazenamento conforme a demanda do cluster.
