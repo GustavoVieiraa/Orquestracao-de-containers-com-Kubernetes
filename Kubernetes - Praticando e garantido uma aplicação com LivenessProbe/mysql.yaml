@@ -20,7 +20,7 @@ spec:
   selector:
     matchLabels:
       app: mysql
-  serviceName: "nginx"
+  serviceName: "mysql"
   replicas: 1
   minReadySeconds: 10
   template:
@@ -35,11 +35,12 @@ spec:
           ports:
             - containerPort: 3306
           volumeMounts:
-            - name: www
-              mountPath: /usr/share/nginx/html
-  volumeClaimTemplates:
-    - metadata:
-        name: www
+            - name: mysql-storage
+              mountPath: /var/lib/mysql
+          volume:
+            - name:
+                persistentVolumeClaim:
+                  claimName: mysql-pvc
       spec:
         accessModes: ["ReadWriteOnce"]
         storageClassName: "my-storage-class"

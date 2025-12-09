@@ -1,0 +1,7 @@
+Nesta aula, aprendemos a vincular o PersistentVolumeClaim ao nosso banco de dados MySQL no Kubernetes, permitindo que ele grave informações de forma permanente.
+
+Primeiro, configuramos o volumeMounts no arquivo mysql.yaml para definir onde o volume será montado dentro do container. Para encontrar o caminho correto, consultamos o arquivo docker-compose.yaml e descobrimos que o caminho é /var/lib/mysql.
+
+Em seguida, vinculamos o PersistentVolumeClaim ao volume, substituindo o volumeClaimTemplates por volumes e definindo o claimName como mysql-pvc.
+
+Por fim, revisamos o código para garantir que todas as configurações estejam corretas, incluindo o serviceName e a versão da imagem do MySQL.
