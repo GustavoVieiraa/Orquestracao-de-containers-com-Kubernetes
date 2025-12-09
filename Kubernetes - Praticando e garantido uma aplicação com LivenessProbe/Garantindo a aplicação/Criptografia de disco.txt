@@ -1,0 +1,32 @@
+Nesta aula, o foco é aumentar a segurança do seu cluster Kubernetes, garantindo que os segredos armazenados estejam protegidos contra acessos não autorizados.
+
+Criptografia de Disco:
+
+    Por que criptografar? Para proteger informações sensíveis (como senhas e tokens) caso alguém acesse o sistema de arquivos do seu cluster.
+    O que é criptografado? A criptografia protege os dados de recursos da API do Kubernetes, como secrets e configmaps. Atenção: ela não criptografa os volumes diretamente.
+    Como habilitar? O processo envolve configurar a criptografia "em repouso" (Encryption at Rest) no Kubernetes.
+
+Passos Práticos:
+
+    Escolha um provedor de criptografia:
+      O instrutor explica sobre os provedores identity, aescbc, aesgcm, kms (v1 e v2) e secretbox.
+      Na aula, é escolhido o aescbc pela sua simplicidade, apesar de ser considerado um método mais fraco.
+
+    Gere uma chave de criptografia:
+      Utilize os comandos fornecidos na documentação do Kubernetes para gerar uma chave aleatória.
+      Importante: Mantenha essa chave em segredo!
+
+    Crie um arquivo de configuração de criptografia (crypt.yaml):
+      Defina quais recursos serão criptografados (ex: secrets e configmaps).
+      Especifique o provedor de criptografia (aescbc) e a chave gerada.
+      Mantenha o provedor identity temporariamente para permitir a leitura de dados não criptografados durante a migração.
+
+    Monte o arquivo de configuração no Minikube:
+      Use o comando minikube mount ./config:/var/lib/minikube/certs/config para disponibilizar o arquivo dentro do ambiente do Minikube.
+      Atenção: Mantenha este processo de montagem em execução!
+    
+    Reinicie o Minikube com a configuração de criptografia:
+      Utilize o comando minikube start --extra-config=apiserver.encryption-provider-config=/var/lib/minikube/certs/config/crypt.yaml para aplicar as configurações.
+
+Conclusão:
+Ao final do processo, seu ambiente Minikube estará com a criptografia ativada, adicionando uma camada extra de segurança.
