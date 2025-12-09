@@ -1,0 +1,9 @@
+Nesta aula, aprendemos como configurar o armazenamento para o banco de dados MySQL no Kubernetes, utilizando volumes persistentes.
+
+    Volumes no Kubernetes: O Kubernetes utiliza uma técnica similar ao Docker para gerenciar o armazenamento, chamada volumes. No entanto, no Kubernetes, é necessário especificar mais campos para garantir que o volume seja consistente e acessível por todo o cluster.
+
+    PersistentVolumeClaim (PVC): Para especificar um volume persistente, é necessário criar um PersistentVolumeClaim. O PVC é uma solicitação de armazenamento que será atendida por um PersistentVolume disponível no cluster.
+
+    Configurando o PVC: No arquivo mysql.yaml, adicionamos um novo bloco YAML para o PVC. Definimos o nome do PVC como mysql-pvc, especificamos o modo de acesso como ReadWriteOnce (o volume pode ser montado por apenas um nó), definimos a capacidade de armazenamento solicitada como 8Gi e definimos o storageClassName como csi-hostpath-sc.
+
+    Ativando o csi-hostpath-sc: O csi-hostpath-sc é um driver CSI (Container Storage Interface) que permite que os pods acessem o armazenamento local do host. Para ativar o csi-hostpath-sc, utilizamos o comando minikube addons enable csi-hostpath-driver.
