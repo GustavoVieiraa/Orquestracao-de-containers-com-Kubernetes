@@ -1,0 +1,5 @@
+Nesta aula, aprendemos sobre a importância de garantir que nossa aplicação esteja sempre disponível. Para isso, o Kubernetes oferece o livenessProbe, que verifica a saúde da aplicação enviando requisições HTTP.
+
+Implementamos o livenessProbe no arquivo app.yaml, especificando a rota /paciente e a porta 3000 para a verificação. Também configuramos o initialDelaySeconds para dar um tempo para a aplicação subir antes de iniciar as verificações, e o periodSeconds para definir a frequência das verificações.
+
+Além disso, foi ressaltada a importância de encontrar um equilíbrio no tempo de verificação, evitando sobrecarregar a aplicação com requisições excessivas.
