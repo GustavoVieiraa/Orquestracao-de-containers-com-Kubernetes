@@ -1,0 +1,4 @@
+Nesta aula, o foco é a criação de um banco de dados MySQL no Kubernetes, utilizando o StatefulSet em vez de um Deployment. Isso se deve à necessidade de evitar a inconsistência de dados que poderia ocorrer se múltiplos bancos de dados tentassem acessar as mesmas informações simultaneamente.
+
+O StatefulSet é mais adequado para bancos de dados porque permite o acesso a dados persistentes, ou seja, dados gravados em disco. A aula demonstra como configurar um StatefulSet para o MySQL, ajustando o arquivo YAML para definir o nome do serviço, o número de réplicas, a imagem do MySQL e a porta. Além disso, aborda a importância do terminationGracePeriodSeconds para garantir que o banco de dados tenha tempo de salvar as informações antes de ser finalizado.
+
