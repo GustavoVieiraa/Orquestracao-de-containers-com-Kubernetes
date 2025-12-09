@@ -1,0 +1,7 @@
+Nesta aula, aprendemos sobre a importância de usar um balanceador de carga (LoadBalancer) em vez de NodePort em ambientes de produção com múltiplos nós no Kubernetes.
+
+O NodePort abre uma porta em todos os nós do cluster, o que pode ser ineficiente quando a aplicação não está em todos os nós. O LoadBalancer resolve esse problema, direcionando o tráfego apenas para os nós onde a aplicação está rodando.
+
+Além disso, o LoadBalancer permite usar portas como 80 e 443, enquanto o NodePort é restrito a portas entre 30000 e 32767. A configuração do LoadBalancer envolve alterar o tipo do serviço no arquivo services.yaml para LoadBalancer.
+
+É importante lembrar que o LoadBalancer depende do ambiente em que o Kubernetes está sendo executado, como AWS Elastic Load Balancer, Google Cloud Load Balancing ou Minikube tunnel. Em ambientes sem suporte a LoadBalancer, podem ocorrer problemas.
