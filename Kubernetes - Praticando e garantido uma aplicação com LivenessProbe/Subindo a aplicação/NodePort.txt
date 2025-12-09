@@ -1,0 +1,24 @@
+Nesta aula, o foco é em como tornar a aplicação acessível externamente no Kubernetes, utilizando o NodePort.
+
+Aqui estão os pontos principais:
+
+    Acessando a Aplicação:
+      O Kubernetes oferece diferentes formas de acessar aplicações, como Ingress (para HTTP/HTTPS) e NodePort (mais simples).
+      O NodePort é prático para ambientes como o Minikube, mas em clusters Kubernetes reais, não é a opção mais recomendada, pois não garante em qual nó a aplicação estará rodando.
+
+    O que é NodePort:
+      NodePort expõe o serviço em uma porta estática em todos os nós do cluster.
+      Por padrão, utiliza portas no intervalo de 30000-32767.
+
+    Criando um NodePort:
+      É criado um arquivo services.yaml para definir o serviço.
+        O arquivo inclui:
+          apiVersion: v1 e kind: Service para definir o tipo de recurso.
+          metadata com o name do serviço (ex: nodeport-vollmed).
+          spec para configurar o NodePort:
+          type: NodePort define o tipo de serviço.
+          selector associa o serviço aos pods com o label app: vollmed.
+          ports define as portas:
+          port: porta que o serviço expõe (ex: 3000).
+          targetPort: porta do container que o serviço encaminha o tráfego (ex: 3000).
+          nodePort: porta no nó que será usada para acessar o serviço externamente (ex: 30000).
