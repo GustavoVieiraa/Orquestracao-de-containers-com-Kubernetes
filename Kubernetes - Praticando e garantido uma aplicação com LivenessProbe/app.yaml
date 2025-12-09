@@ -19,3 +19,14 @@ spec:
           image: gustavovieiradev/vollmed-api:1
           ports:
             - containerPort: 3000
+          env:
+            - name: DB_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: dados
+                  key: DB_DATABASE
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: dados
+                  key: DB_HOST

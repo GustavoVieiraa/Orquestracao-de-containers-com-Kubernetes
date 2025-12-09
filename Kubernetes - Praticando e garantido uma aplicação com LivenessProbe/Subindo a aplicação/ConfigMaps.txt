@@ -1,0 +1,13 @@
+Nesta aula, aprendemos sobre como utilizar o ConfigMaps no Kubernetes para gerenciar variáveis de ambiente de forma eficiente e organizada.
+
+Pontos principais:
+
+    Variáveis de Ambiente: Identificamos as variáveis de ambiente necessárias para a aplicação vollmed (DB_HOST, DB_DATABASE, DB_USER) a partir do arquivo docker-compose.yaml.
+
+    O que são ConfigMaps: Exploramos a documentação do Kubernetes para entender o que são ConfigMaps: objetos da API para armazenar dados não confidenciais em pares chave-valor.
+
+    Criação do ConfigMap: Criamos um arquivo configmaps.yaml para definir um ConfigMap chamado dados com as variáveis DB_DATABASE e DB_HOST.
+
+    Acessando Variáveis: No arquivo app.yaml, mostramos como acessar os valores definidos no ConfigMap utilizando a propriedade valueFrom e configMapKeyRef.
+
+Em resumo, o ConfigMaps é uma ferramenta poderosa para externalizar configurações da sua aplicação, facilitando a gestão e evitando a necessidade de hardcoding de valores diretamente no código.

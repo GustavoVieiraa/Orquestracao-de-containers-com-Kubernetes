@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dados
+data:
+  DB_DATABASE: "testemed"
+  DB_HOST: ""
