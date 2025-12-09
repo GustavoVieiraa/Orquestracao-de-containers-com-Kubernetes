@@ -1,0 +1,15 @@
+Olá! Nesta aula, o foco é configurar um serviço para o banco de dados no Kubernetes, facilitando a conexão da aplicação ao banco por meio de um endereço fixo.
+
+Principais pontos abordados:
+
+    Serviço do Banco de Dados: Configuração de um serviço Kubernetes para o StatefulSet do MySQL, definindo o nome, as portas e o clusterIP.
+
+    Variáveis de Ambiente: Configuração das variáveis de ambiente necessárias para o MySQL, como MYSQL_ROOT_PASSWORD e MYSQL_DATABASE, utilizando secrets e configmaps.
+
+    Aplicação das Configurações: Utilização do comando kubectl apply para aplicar as configurações dos arquivos YAML e subir o banco de dados e a aplicação.
+
+    Correção de Erros: Identificação e correção de erros de indentação no arquivo mysql.yaml para garantir a criação correta dos volumes.
+
+    Verificação no Dashboard: Acesso ao dashboard do Kubernetes para verificar o status dos componentes, como StatefulSet, Replica Sets e Pods.
+
+Além disso, foi explicado o motivo de aparecerem replica sets e pods ao criar um deployment, mostrando como o Kubernetes orquestra a criação desses componentes.

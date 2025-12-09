@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: mysql
   labels:
-    app: nginx
+    app: mysql
 spec:
   ports:
-    - port: 80
-      name: web
+    - port: 3306
+      name: mysql
   clusterIP: None
   selector:
-    app: nginx
+    app: mysql
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -37,16 +37,21 @@ spec:
           volumeMounts:
             - name: mysql-storage
               mountPath: /var/lib/mysql
-          volume:
-            - name:
-                persistentVolumeClaim:
-                  claimName: mysql-pvc
-      spec:
-        accessModes: ["ReadWriteOnce"]
-        storageClassName: "my-storage-class"
-        resources:
-          requests:
-            storage: 1Gi
+          env:
+            - name: MYSQL_DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: dados
+                  key: DB_DATABASE
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: senhas
+                  key: DB_PASSWORD
+      volumes:
+        - name: mysql-storage
+          persistentVolumeClaim:
+            claimName: mysql-pvc
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
