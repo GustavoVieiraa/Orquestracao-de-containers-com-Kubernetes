@@ -1,0 +1,7 @@
+Nesta aula, configuramos o agendamento de backup do MySQL, definindo as variáveis de ambiente necessárias para acessar o banco de dados e especificando onde o backup será salvo.
+
+Primeiro, copiamos as variáveis de ambiente do banco de dados do app.yaml para o mysql.yaml, renomeando-as para MYSQL_ENV_DB_HOST, MYSQL_ENV_DB_USER e MYSQL_ENV_DB_PASS.
+
+Em seguida, definimos um volume e um volumeMount para especificar o local onde o backup será salvo. O volumeMount define o nome (mysqldump) e o caminho (/mysqldump) dentro do contêiner, enquanto o volume especifica que o backup será salvo em uma pasta na máquina (hostPath), fora do Kubernetes, no caminho /home/alura/mysqldump.
+
+Por fim, aplicamos as alterações com o comando kubectl apply -f mysql.yaml -f services.yaml, criando o cronjob.batch/mysql-dump.
