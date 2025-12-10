@@ -83,27 +83,27 @@ spec:
                 - /bin/sh
                 - -c
                 - date; echo Hello from the Kubernetes cluster
+              env:
+                - name: MYSQL_ENV_DB_HOST
+                  valueFrom:
+                    configMapKeyRef:
+                      name: dados
+                      key: DB_HOST
+                - name: MYSQL_ENV_DB_USER
+                  valueFrom:
+                    secretKeyRef:
+                      name: senhas
+                      key: DB_USER
+                - name: MYSQL_ENV_DB_PASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: senhas
+                      key: DB_PASSWORD
+              volumeMounts:
+                - name: mysqldump
+                  mountPath: /mysqldump
           restartPolicy: OnFailure
-          env:
-            - name: MYSQL_ENV_DB_HOST
-              valueFrom:
-                configMapKeyRef:
-                  name: dados
-                  key: DB_HOST
-            - name: MYSQL_ENV_DB_USER
-              valueFrom:
-                secretKeyRef:
-                  name: senhas
-                  key: DB_USER
-            - name: MYSQL_ENV_DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: senhas
-                  key: DB_PASSWORD
           volumes:
-            - name: mysql-storage
-              persistentVolumeClaim:
-                claimName: mysql-pvc
-          volumeMounts:
-            - name: mysql-storage
-              mountPath: /var/lib/mysql
+            - name: mysqldump
+              hostPath:
+                path: /home/gusta/mysqldump
