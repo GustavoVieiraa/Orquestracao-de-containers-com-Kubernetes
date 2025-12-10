@@ -64,3 +64,23 @@ spec:
     requests:
       storage: 8Gi
   storageClassName: csi-hostpath-sc
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: mysql-dump
+spec:
+  schedule: "0 3 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: mysql-dump
+              image: leonardosartorello/mysqldump:v4
+              imagePullPolicy: IfNotPresent
+              command:
+                - /bin/sh
+                - -c
+                - date; echo Hello from the Kubernetes cluster
+          restartPolicy: OnFailure

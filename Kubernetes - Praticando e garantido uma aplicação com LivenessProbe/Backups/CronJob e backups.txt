@@ -1,0 +1,10 @@
+Nesta aula, aprendemos a criar backups automáticos do banco de dados MySQL utilizando o CronJob do Kubernetes. O CronJob permite agendar tarefas de forma periódica, garantindo que o backup seja realizado sem intervenção manual.
+
+Foi abordado:
+
+    O que é CronJob: Um controlador do Kubernetes que cria tarefas agendadas.
+
+    Agendamento: Como definir o agendamento para execução do backup, utilizando o Crontab Guru para auxiliar na criação da expressão cron.
+  
+    Configuração do CronJob: Definição do arquivo YAML com as configurações necessárias, como a imagem do container (leonardosartorello/mysqldump:v4), política de pull da imagem e política de reinicialização em caso de falha.
+
